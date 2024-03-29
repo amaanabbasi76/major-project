@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1802676c;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            font-variant: small-caps;
+        }
+
+        .blogs {
+            margin: 2vh;
+            border-radius: 5px;
+            background-color: rgba(18, 140, 247, 0.173);
+            padding: 1vh;
+        }
+
+        .blogs span {
+            float: inline-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>
+            <%= name %>
+        </h1>
+    </div>
+    <% for (let i=0; i < blogs.length; i++) { %>
+        <div class="blogs">
+            <%= blogs[i].blog %>
+                <br>
+                <span>
+                    <%= blogs[i].time %>
+                        <%= blogs[i].date%>
+                </span>
+        </div>
+        <% } %>
+            </div>
+
+</body>
+
+</html>

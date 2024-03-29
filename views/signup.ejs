@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1802676c;
+        }
+
+        form {
+            background-color: #ecebeb30;
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10%;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 10%;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .ball1 {
+            position: absolute;
+            height: 20vw;
+            width: 20vw;
+            background-color: red;
+            left: 30vw;
+            border-radius: 50%;
+            top: 30vh;
+            animation: balls 4s infinite ease-in-out;
+        }
+
+        @keyframes balls {
+
+            0%,
+            100% {
+                left: 0vw;
+            }
+
+            50% {
+                left: 80vw
+            }
+        }
+
+        #warning {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            font-size: small;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball1"></div>
+    <form id="signup-form" action='/signup' method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Signup">
+        <div id="warning">
+            <%= warning %>
+        </div>
+    </form>
+
+</body>
+
+</html>

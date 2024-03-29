@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1802676c;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+
+        }
+
+        .mineprofile {
+            width: 100vw;
+            position: relative;
+            top: 0%;
+            background-color: rgba(240, 248, 255, 0.134);
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .mineprofile svg {
+            height: 8vh;
+            margin: 1vh;
+        }
+
+        .information div {
+            margin: 2vh;
+        }
+
+        .information {
+            width: 100vw;
+
+        }
+
+        .mineblogs {
+            display: flex;
+            font-variant: small-caps;
+            justify-content: start;
+            flex-direction: column;
+            padding: 2vh;
+        }
+
+        .mineblogs button {
+            position: absolute;
+            right: 20%;
+            margin: 3vh;
+            font-size: 5vh;
+            height: 5vh;
+            width: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(18, 140, 247, 0.716);
+        }
+
+        .mineblogs button svg {
+            height: 5vh;
+            width: 5vh;
+        }
+
+        .blog {
+            margin: 2vh;
+            border-radius: 5px;
+            background-color: rgba(18, 140, 247, 0.173);
+            padding: 1vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        span {
+            position: relative;
+            float: inline-end;
+        }
+
+        #form {
+            width: 100vw;
+            margin: 0 auto;
+            background-color: rgb(12, 149, 222);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+            left: 100vw;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 70%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            width: 70%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+
+        }
+
+        #getback {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            width: 70%;
+            margin-bottom: 50px;
+            position: fixed;
+            top: 0px;
+            left: 100vw;
+            margin-left: 20px;
+            transition-duration: 0.2s;
+            transition-timing-function: linear;
+        }
+
+        #getback:hover {
+            background-color: #45a049;
+        }
+
+        #mainpage {
+            position: absolute;
+            left: 20%;
+            margin: 3vh;
+            font-size: 5vh;
+            height: 5vh;
+            width: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: rgba(18, 140, 247, 0.716);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mineprofile">
+        <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path
+                d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+        </svg>
+        <div class="information">
+            <hr />
+            <div> Name <br>
+                <%= name %>
+            </div>
+            <hr />
+            <div> mail <br>
+                <%= mail %>
+            </div>
+        </div>
+    </div>
+    <div class="mineblogs">
+        <a href="/mainpage/<%= mail %>">
+            <button id="mainpage">
+                <?xml version="1.0" ?>
+                <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                    enable-background="new 0 0 32 32" height="32px" version="1.1" viewBox="0 0 32 32" width="32px"
+                    xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="Guides" />
+                    <g id="Mail" />
+                    <g id="Cloud" />
+                    <g id="Home" />
+                    <g id="Back">
+                        <path
+                            d="M25.002,16c0,0.5522-0.4473,1-1,1H9.8672l4.9629,7.4453c0.3066,0.4595,0.1826,1.0806-0.2773,1.3867   C14.3818,25.9458,14.1895,26,13.999,26c-0.3232,0-0.6406-0.1563-0.833-0.4453L6.7959,16l6.3701-9.5547   c0.3057-0.46,0.9248-0.5845,1.3867-0.2773c0.46,0.3062,0.584,0.9272,0.2773,1.3867L9.8672,15H24.002   C24.5547,15,25.002,15.4478,25.002,16z" />
+                    </g>
+                    <g id="Next" />
+                    <g id="Reload" />
+                    <g id="Buble" />
+                    <g id="Accept" />
+                    <g id="Reject" />
+                    <g id="User" />
+                    <g id="Download" />
+                    <g id="Upload" />
+                    <g id="Camera" />
+                    <g id="Notification" />
+                    <g id="About" />
+                    <g id="Search" />
+                    <g id="Cart" />
+                    <g id="Sound" />
+                    <g id="List" />
+                    <g id="Settings" />
+                </svg>
+            </button></a>
+        <h1>My Blogs</h1>
+        <button onclick="formdisplay()"><svg xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+            </svg></button>
+
+        <% for (let i=0; i < blogs.length; i++) { %>
+            <div class="blog">
+                <%= blogs[i].blog %>
+                    <br>
+                    <span>
+                        <%= blogs[i].time %>
+                            <%= blogs[i].date%>
+                    </span>
+            </div>
+            <% } %>
+    </div>
+    <form id="form" action="" method="POST" autocomplete="off">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= name %>" readonly><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<%= mail %>" readonly><br><br>
+        <label for="title">Title/Topic:</label>
+        <input type="text" id="title" name="title" required><br><br>
+        <label for="blog">Blog:</label><br>
+        <textarea id="blog" name="blog" rows="10" cols="50" required></textarea><br><br>
+        <input onclick="formdisplay()" type="submit" value="Submit">
+    </form>
+    <button onclick="formdisplay()" value="" id="getback">get back</button>
+</body>
+<script>
+    let title = document.getElementById('title')
+    let blog = document.getElementById('blog')
+    let form = document.getElementById('form')
+    let getback = document.getElementById('getback')
+    let left = 0
+    function formdisplay() {
+        if (left == 0) {
+            form.style.left = "0vw"
+            getback.style.left = "0vw"
+            left = 1
+        } else {
+            left = 0
+            form.style.left = "100vw"
+            getback.style.left = "100vw"
+            setTimeout(() => {
+                title.value = ""
+                blog.value = ""
+            }, 1000)
+
+        }
+    }
+    Form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission behavior
+        console.log("Form submitted!"); // This will be logged to the console instead of the page reloading
+    });
+</script>
+
+</html>

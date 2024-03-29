@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1802676c;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff32;
+            border-radius: 5px;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .ball1 {
+            position: absolute;
+            height: 20vw;
+            width: 20vw;
+            background-color: red;
+            left: 30vw;
+            border-radius: 50%;
+            top: 30vh;
+            animation: balls 4s infinite ease-in-out;
+        }
+
+        @keyframes balls {
+
+            0%,
+            100% {
+                left: 0vw;
+            }
+
+            50% {
+                left: 80vw
+            }
+        }
+
+        #warning {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            font-size: small;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball1"></div>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit">Login</button>
+            <div id="warning">
+                <%= warning %>
+            </div>
+        </form>
+        <a href="/signup">Signup</a>
+    </div>
+</body>
+
+</html>
