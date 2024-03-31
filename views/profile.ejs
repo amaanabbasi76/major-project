@@ -177,7 +177,22 @@
             justify-content: center;
             border-radius: 50%;
             background-color: rgba(18, 140, 247, 0.716);
-        }
+        }#logout{
+            height: 10%;
+            width: 10%;
+            background-color: #007bff;
+            color: #fff; 
+            position: absolute;
+            right: 10%;
+            top: 80%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+
+         }
     </style>
 </head>
 
@@ -196,6 +211,7 @@
             <hr />
             <div> mail <br>
                 <%= mail %>
+                <a href="/logout/<%= mail %>"><div id="logout">logout</div></a>
             </div>
         </div>
     </div>

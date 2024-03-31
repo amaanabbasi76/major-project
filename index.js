@@ -15,8 +15,8 @@ app.use(bodyParser.json());
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'Kyaherechutiye69',
-  database: 'webwork'
+  password: 'your_password',
+  database: 'your_database'
 });
 connection.connect();
 connection.query('CREATE TABLE IF NOT EXISTS last_user (mail varchar(50),blog_time datetime);', (err, result) => {
