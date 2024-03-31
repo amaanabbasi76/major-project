@@ -15,8 +15,8 @@ app.use(bodyParser.json());
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'your_password',
-  database: 'your_database'
+  password: 'Kyaherechutiye69',
+  database: 'webwork'
 });
 connection.connect();
 connection.query('CREATE TABLE IF NOT EXISTS last_user (mail varchar(50),blog_time datetime);', (err, result) => {
@@ -207,4 +207,8 @@ app.get('/mainpage/:mail',(req,res) => {
   }else{
     res.send('<h1>404 - notlogein</h1>')
   }
+})
+app.get('/logout/:mail',(req,res) => {
+  logedinmail = "notloged"
+  res.render('loginpage', { warning: "" })
 })
